@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <meta name="description" content="Weather App made with HTML, TailwindCSS and JavaScript.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="icon.svg" type="image/svg">
+</head>
+<body>
+    <header></header>
+    <main class="flex justify-center items-center h-screen">
+        <section class="relative w-2/8 rounded-md px-4 py-6 bg-[black]">
+            <div  class="search-box  w-full h-auto flex items-center justify-between border border-sky rounded-md px-1 py-1">
+                <img src="./img/map-pin.svg" alt="">
+                <input id="cityInput" class="w-full bg-transparent outline-none text-md text-[#fff] font-medium uppercase py-1 px-2 placeholder:text-[#fff/95] " type="text" placeholder="Enter your city">
+                <button id="button" class="w-[40px] bg-transparent outline-none text-lg text-[#fff] py-1 cursor-pointer">
+                    <img src="./img/zoom.svg" alt="">
+                </button>
+            </div>
+
+            <article id="weatherBox" class="block">
+                <div class="text-center text-[#fff] py-4">
+                    <div>
+                        <div>
+                            <div class="my-6">
+                                <img id="img_weather" class="mx-auto"  src="img/icons/clear.png" alt="img_weather">
+                                <p id="temperature" class="text-4xl font-bold mt-4 mb-2">16 °C</p>
+                                <p id="description" class="text-md font-medium text-lg">Broken Clouds</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="weather-details" class="flex gap-4 w-full px-2 justify-between">
+                    <div class="text-[#fff] flex gap-2">
+                        <img class="w-10" src="img/icons/50n.png" alt="img_weather">
+                        <div class="">
+                            <span id="humidity" class="font-medium text-xl">0%</span>
+                            <p class="font-thin text-xs">Humidty</p>
+                        </div>
+                        
+                    </div>
+                    <div class="text-[#fff] flex gap-2">
+                        <img class="w-10" src="img/icons/wind.svg" alt="img_weather">
+                        <div class="">
+                            <span id="wind" class="font-medium text-xl">0 Km/h</span>
+                            <p class="font-thin text-xs">Wind speed</p>
+                        </div>
+                        
+                    </div>
+    
+                </div>
+            </article>
+
+            <article id="error404" class="hidden flex flex-col text-[#fff] justify-center items-center py-16">
+                <img class="w-40" src="./img/warning.png" alt="img_warning">
+                <p>Oops! City not found!</p>
+            </article>
+
+        </section>
+    </main>
+    <footer></footer>
+</body>
+<script src="./script.js"></script>
+</html>
